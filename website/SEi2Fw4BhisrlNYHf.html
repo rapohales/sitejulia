@@ -1,0 +1,125 @@
+<html><head><base href="/" />
+  <meta charset="UTF-8">
+  <title>Pra ti juuj (minha namorada linda feliz 5 meses)</title>
+  <style>
+    body {
+      background-color: #ffddee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    h1 {
+      color: #ff6699;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    #cuteWord {
+      color: #ff3377;
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #ff6699;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff3377;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz 5 meses sua linda</h1>
+    <h1>Você é:</h1>
+    <div id="cuteWord">Docinha</div>
+    <button onclick="generateCuteWord()">Nova palavra fofa ✨</button>
+  </div>
+
+  <script>
+    const cuteWords = [
+      "Docinha",
+      "Fofinha",
+      "Amorzinha",
+      "Lindinha",
+      "Meiguinha",
+      "Beijoqueira",
+      "Bonequinha",
+      "Xodozinha",
+      "Bolinha",
+      "Gracinha",
+      "Dengosa",
+      "Carinhosa",
+      "Preciosa",
+      "Querida",
+      "Chuchuzinha",
+      "Bombomzinha",
+      "Coraçãozinha",
+      "Anjinha",
+      "Princesa",
+      "Princesinha",
+      "Tesourinha",
+      "Gatinha",
+      "Fofura",
+      "Doçura",
+      "Lindona",
+      "Cabeçona",
+      "Amora",
+      "Gostosa",
+      "Cabeçuda",
+      "Dorminhoca ao contrário",
+      "Bunduda",
+      "Coxuda",
+      "A mulher da minha vida",
+      "Fofonha",
+      "Gata"
+  
+    ];
+
+    function generateCuteWord() {
+      const wordElement = document.getElementById('cuteWord');
+      const currentWord = wordElement.textContent;
+      let newWord;
+      
+      // Make sure we don't get the same word twice in a row
+      do {
+        newWord = cuteWords[Math.floor(Math.random() * cuteWords.length)];
+      } while (newWord === currentWord);
+      
+      wordElement.style.opacity = '0';
+      
+      setTimeout(() => {
+        wordElement.textContent = newWord;
+        wordElement.style.opacity = '1';
+      }, 300);
+    }
+  </script>
+</body></html>
