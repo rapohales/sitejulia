@@ -1,7 +1,12 @@
 :root {
     --verniz: #8B3D3D; /* Um verniz mais seco, avermelhado e elegante */
-    --walnut: #A67R5B; /* Nogueira em um tom mais suave e neutro */
+    --walnut: #A67B5B; /* Nogueira em um tom mais suave e neutro */
+    --cream: #F5F2E6; /* Um creme ligeiramente mais seco e sutil */
+    --madeira-escura: #3E2E2E; /* Madeira escura em tom seco e profundo */
     --ebony: #2A1F1D; /* Ébano, quase preto, com um toque sutil de marrom */
+    --pine: #D8BFAA; /* Tom claro de madeira, como o pinho */
+    --sage: #6B7666; /* Verde sálvia mais seco, para complementar */
+    --oak: #BC8F5A; /* Carvalho médio com tom amadeirado quente */
 }
 
 * {
