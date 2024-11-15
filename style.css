@@ -23,8 +23,8 @@ body {
 }
 
 .header {
-    background: linear-gradient(45deg, var(--dark-cedar), var(--wood-brown));
-    color: var(--cream);
+    background: linear-gradient(45deg, var(--madeira-escura), var(--pine));
+    color: var(--walnut);
     padding: 2rem;
     text-align: center;
     position: relative;
