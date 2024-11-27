@@ -1,89 +1,209 @@
 :root {
-    --wood-brown: #8B5A2B;
-    --dark-cedar: #4B3621;
-    --light-walnut: #D2B48C;
-    --sage: #A0C4A8;
-    --verniz: #D03A24;
-    --cream: #F7F1E3;
+    --verniz: #8B3D3D; /* Um verniz mais seco, avermelhado e elegante */
+    --walnut: #A67B5B; /* Nogueira em um tom mais suave e neutro */
+    --cream: #F5F2E6; /* Um creme ligeiramente mais seco e sutil */
+    --madeira-escura: #3E2E2E; /* Madeira escura em tom seco e profundo */
+    --ebony: #242121; /* Ébano, quase preto, com um toque sutil de marrom */
+    --pine: #D8BFAA; /* Tom claro de madeira, como o pinho */
+    --sage: #6B7666; /* Verde sálvia mais seco, para complementar */
+    --oak: #BC8F5A;
+    --black: #101210;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--cream);
+    color: var(--ebony);
+    line-height: 1.6;
 }
 
-header {
-    background-color: var(--verniz);
-    color: #fff;
-    text-align: center;
+.header {
+    background: linear-gradient(45deg, var(--madeira-escura), var(--oak));
+    color: var(--pine);
     padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.grain-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+nav {
+    background-color: var(--ebony);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    background: var(--dark-cedar);
-    padding: 1rem;
-    margin: 0;
+    gap: 2rem;
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
+nav a {
+    color: var(--cream);
     text-decoration: none;
-    color: #fff;
-    font-weight: 600;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover {
+    color: var(--light-walnut);
 }
 
-main {
+.gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
 }
 
-.section {
-    background-color: var(--cream);
+.gallery-item {
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
-    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.about-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background-color: var(--cream);
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.section h2 {
+.about-section h2 {
     color: var(--verniz);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: var(--ebony);
+    line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
-.gallery {
+.skills-section {
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
-.gallery-item {
-    max-width: 200px;
+.skill-card {
+    background: var(--pine);
+    color: var(--ebony);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+.skill-card h4 {
+    color: var(--verniz);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
 .contact-info {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: var(--cream);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: var(--verniz);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.contact-method {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-method svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--wood-brown);
 }
 
 .contact-method p {
-    margin: 0;
-    color: var(--dark-cedar);
+    font-size: 1rem;
+    color: var(--ebony);
+}
+
+@media (max-width: 768px) {
+    .about-section, .contact-info {
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
 }
