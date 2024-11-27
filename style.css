@@ -6,7 +6,8 @@
     --ebony: #FFFFFF; /* Ébano, quase preto, com um toque sutil de marrom */
     --pine: #D8BFAA; /* Tom claro de madeira, como o pinho */
     --sage: #6B7666; /* Verde sálvia mais seco, para complementar */
-    --oak: #BC8F5A; /* Carvalho médio com tom amadeirado quente */
+    --oak: #BC8F5A;
+    --black: #101210;
 }
 
 * {
