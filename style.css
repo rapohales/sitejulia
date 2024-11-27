@@ -97,76 +97,113 @@ nav a:hover {
     max-width: 900px;
     margin: 4rem auto;
     padding: 3rem;
-    background-color: white;
+    background-color: var(--cream);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .about-section h2 {
-    color: var(--wood-brown);
+    color: var(--verniz);
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
-    position: relative;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: var(--ebony);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
 }
 
 .skills-section {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
 }
 
 .skill-card {
-    background: var(--cream);
+    background: var(--pine);
+    color: var(--ebony);
     padding: 1.5rem;
-    border-radius: 5px;
-    border-left: 4px solid var(--wood-brown);
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .skill-card h4 {
-    color: var(--dark-cedar);
-    margin-bottom: 0.5rem;
+    color: var(--verniz);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
-.awards-section {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 2px solid var(--light-walnut);
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.timeline {
-    margin: 2rem 0;
-    position: relative;
-}
-
-.timeline-item {
-    margin-bottom: 1.5rem;
-    padding-left: 2rem;
-    position: relative;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--wood-brown);
+.skill-card li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
 }
 
 .contact-info {
-    margin-top: 2rem;
-    padding: 2rem;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 3rem;
     background: var(--cream);
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: var(--verniz);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
 }
 
 .contact-method {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    justify-content: center;
     gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
+.contact-method svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--wood-brown);
+}
+
+.contact-method p {
+    font-size: 1rem;
+    color: var(--ebony);
+}
+
+@media (max-width: 768px) {
+    .about-section, .contact-info {
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+}
