@@ -1,15 +1,16 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier Verana - Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<html><head><base href="." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atelier Verana - Portfólio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="header">
+    <div class="grain-overlay"></div>
     <h1>Atelier Verana</h1>
     <p>Esculturas Artesanais</p>
 </header>
@@ -21,52 +22,70 @@
     </ul>
 </nav>
 
-<main>
-    <section id="galeria" class="section">
-        <h2>Galeria</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <svg viewBox="0 0 300 300" width="100%" height="300">
-                    <path d="M150,50 Q200,100 150,150 T150,250" fill="none" stroke="var(--wood-brown)" stroke-width="15"/>
-                </svg>
-            </div>
-            <div class="gallery-item">
-                <svg viewBox="0 0 300 300" width="100%" height="300">
-                    <rect x="50" y="50" width="200" height="200" fill="var(--light-walnut)" rx="20"/>
-                </svg>
-            </div>
-            <div class="gallery-item">
-                <svg viewBox="0 0 300 300" width="100%" height="300">
-                    <polygon points="150,50 250,150 150,250 50,150" fill="var(--sage)" stroke="var(--wood-brown)" stroke-width="8"/>
-                </svg>
-            </div>
-        </div>
-    </section>
+<section id="galeria" class="gallery">
+    <div class="gallery-item">
+        <svg viewBox="0 0 300 300" width="100%" height="300">
+            <path d="M150,50 Q200,100 150,150 T150,250" fill="none" stroke="var(--wood-brown)" stroke-width="15"/>
+            <path d="M100,50 Q150,100 100,150 T100,250" fill="none" stroke="var(--dark-cedar)" stroke-width="10"/>
+        </svg>
+    </div>
+    <div class="gallery-item">
+        <svg viewBox="0 0 300 300" width="100%" height="300">
+            <rect x="50" y="50" width="200" height="200" fill="var(--light-walnut)" rx="20"/>
+            <circle cx="150" cy="150" r="60" fill="var(--dark-cedar)"/>
+        </svg>
+    </div>
+    <div class="gallery-item">
+        <svg viewBox="0 0 300 300" width="100%" height="300">
+            <polygon points="150,50 250,150 150,250 50,150" fill="var(--sage)" stroke="var(--wood-brown)" stroke-width="8"/>
+        </svg>
+    </div>
+</section>
 
-    <section id="sobre" class="section">
-        <h2>Sobre Mim</h2>
-        <p>Olá! Sou Vera Lúcia, uma artista especializada em esculturas e móveis em madeira, dedicada a criar peças únicas.</p>
-        <p>Com mais de 15 anos de experiência, transformo a madeira em arte útil, como mesas, bancos e cadeiras.</p>
-    </section>
+<section id="sobre" class="about-section">
+    <h2>Sobre Mim</h2>
+    <p>Olá! a Vera Lúcia, uma artista especializada em esculturas e móveis em madeira, dedicada a fazer meus projetos.. Há mais de 15 anos, trabalho com diferentes tipos de madeira, explorando suas características naturais e texturas para criar peças que possam ser úteis para o dia a dia, como
+        mesas, bancos e cadeiras.</p>
+    
+    <p>Minha jornada começou em uma pequena oficina no interior de Montenegro, onde aprendi as técnicas tradicionais. Desde então, desenvolvi meu próprio estilo, mesclando técnicas contemporâneas com o respeito pela tradição artesanal brasileira, trabalhando em uma chácara
+        em Brochier RS.</p>
 
-    <section id="contato" class="section">
-        <h2>Contato</h2>
-        <div class="contact-info">
-            <div class="contact-method">
-                <p>Email: contato@artesmadeira.com.br</p>
-            </div>
-            <div class="contact-method">
-                <p>Telefone: (31) 99999-9999</p>
-            </div>
-            <div class="contact-method">
-                <p>Atelier: Chácara em Brochier RS</p>
-            </div>
+    <div class="skills-section">
+        <div class="skill-card">
+            <h4>Especialidades</h4>
+            <ul>
+                <li>Móveis</li>
+                <li>Entalhe Manual</li>
+                <li>Torneamento em Madeira</li>
+            </ul>
+    </div>
+    <div class="contact-info" id="contato">
+        <h3>Contato</h3>
+        <div class="contact-method">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--dark-cedar)">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <p>Email: contato@artesmadeira.com.br</p>
         </div>
-    </section>
-</main>
+        <div class="contact-method">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--dark-cedar)">
+                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7z"/>
+            </svg>
+            <p>Telefone: (31) 99999-9999</p>
+        </div>
+        <div class="contact-method">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--dark-cedar)">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <p>Atelier: Chácara em Brochier RS</p>
+            <p>Horário de Funcionamento: Seg-Sex 9h às 18h | Sáb 9h às 13h</p>
+        </div>
+    </div>
+</section>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll para links de navegação
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -76,7 +95,30 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Animação para os itens da galeria
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    galleryItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.6s ease-out';
+        observer.observe(item);
+    });
 });
 </script>
+
 </body>
-</html>
+</html> 
