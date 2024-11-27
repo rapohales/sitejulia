@@ -170,7 +170,7 @@ nav a:hover {
 .contact-method {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Mantém alinhado à esquerda */
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -179,28 +179,18 @@ nav a:hover {
     width: 24px;
     height: 24px;
     fill: var(--wood-brown);
-    flex-shrink: 0; /* Garante que o ícone não deforme */
 }
 
 .contact-method p {
     font-size: 1rem;
     color: var(--ebony);
-    margin: 0;
-    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-    .contact-method {
-        justify-content: center; /* Alinha ao centro em telas menores */
-        text-align: center; /* Ajusta texto para centralizado */
-        flex-direction: row; /* Mantém a orientação horizontal */
+    .about-section, .contact-info {
+        padding: 2rem;
+        text-align: left;
     }
-
-    .contact-method p {
-        text-align: left; /* Centraliza apenas o bloco em telas pequenas */
-    }
-}
-
 
     .skills-section {
         flex-direction: column;
@@ -212,4 +202,8 @@ nav a:hover {
         max-width: 300px;
     }
 
-
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+}
