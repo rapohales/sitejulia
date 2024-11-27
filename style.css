@@ -212,8 +212,4 @@ nav a:hover {
         max-width: 300px;
     }
 
-    .contact-method {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+
