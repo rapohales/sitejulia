@@ -25,7 +25,7 @@ body {
 
 .header {
     background: linear-gradient(45deg, var(--madeira-escura), var(--oak));
-    color: var(--sage);
+    color: var(--pine);
     padding: 2rem;
     text-align: center;
     position: relative;
