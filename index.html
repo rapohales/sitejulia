@@ -17,13 +17,13 @@
 <nav>
     <ul>
         <li><a class="link-opacity-10" href="galeria.html">Galeria</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a class="link-opacity-10" href="#sobre">Sobre</a></li>
+        <li><a class="link-opacity-10" href="#contato">Contato</a></li>
     </ul>
 </nav>
-
-
-
+<div class="d-flex justify-content-center ">
+<img src="fotos/imagemvóelanaotaassustada.jpg" alt="Imagem redonda" class="rounded-circle mt-5" style="width: 300px; height: 300px;">
+</div>
 <section id="sobre" class="about-section">
     <h2>Sobre Mim</h2>
     <p>Olá! Sou Vera Lúcia, uma artista especializada em esculturas e móveis em madeira, dedicada a fazer meus projetos. Há mais de 15 anos, trabalho com diferentes tipos de madeira, explorando suas características naturais e texturas para criar peças que possam ser úteis para o dia a dia, como
@@ -34,12 +34,15 @@
 
     <div class="skills-section">
         <div class="skill-card">
+            <div class="align-self-start">
             <h4>Especialidades</h4>
             <ul>
                 <li>Móveis</li>
                 <li>Entalhe Manual</li>
                 <li>Torneamento em Madeira</li>
             </ul>
+            </div>
+        </div>
     </div>
     <div class="contact-info" id="contato">
         <h3>Contato</h3>
@@ -71,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
     anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
 
-        // Check if it's an internal link (starts with #)
         if (targetId.startsWith('#')) {
             e.preventDefault();
             const targetElement = document.querySelector(targetId);
